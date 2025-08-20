@@ -330,6 +330,7 @@
                         </tr>
                       </thead>
                       <tbody>
+                         @if (expenseRequestData?.expenseRequestLog?.length > 0) {
                         @for (log of expenseRequestData?.expenseRequestLog; track $index) {
                         <tr>
                           <td data-label="Date"><span>{{log?.actionDatetimeString}}</span></td>
@@ -343,6 +344,11 @@
                           </td>
                         </tr>
                         }
+                         } @else {
+    <tr>
+      <td colspan="4" class="text-center">No data available</td>
+    </tr>
+  }
                       </tbody>
                     </table>
                     }

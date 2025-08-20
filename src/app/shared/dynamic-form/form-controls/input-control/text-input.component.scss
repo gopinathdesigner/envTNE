@@ -1,3 +1,7 @@
 lib-text-input {
     
+    .mdc-text-field__input::placeholder {
+	opacity: 1;
+}
+
 }
